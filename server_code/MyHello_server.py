@@ -1,3 +1,4 @@
+import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -18,4 +19,4 @@ import anvil.server
 @anvil.server.callable
 def say_hello(name):
   print('Hello,', name)
-  app_tables.user_table.add_row(name=name)
+  app_tables.visitors_table.add_row(name=name, author=anvil.users.get_user())
