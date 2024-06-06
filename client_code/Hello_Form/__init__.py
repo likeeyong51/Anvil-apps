@@ -1,5 +1,9 @@
 from ._anvil_designer import Hello_FormTemplate
 from anvil import *
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+import anvil.server
 
 
 class Hello_Form(Hello_FormTemplate):
@@ -11,4 +15,8 @@ class Hello_Form(Hello_FormTemplate):
 
   def hello_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.message_label.text = "Hello, " + self.name_box.text + '!'
+    name = self.name_box.text
+    
+    self.message_label.text = "Hello, " + name + '!'
+    # make a call to the server procedure
+    anvil.server.call('say_hello', name)

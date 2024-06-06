@@ -2,7 +2,8 @@ unique_ids:
   forms:
     Hello_Form: AAPHLQCDQJARPJYFD7XTAAPSWIU2IWU6
   modules: {}
-  server_modules: {}
+  server_modules:
+    MyHello_server: '1717651774746376387490020.3021'
   assets:
     standard-page.html: 4CAKXAREVWWG3R23L3JGIAD3OUW25WOU
     theme.css: BL54NTG4ALYX2AVO4YCPURWD7PNBGVLM
