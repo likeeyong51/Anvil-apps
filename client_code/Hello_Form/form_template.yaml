@@ -1,0 +1,40 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: column_panel_1
+    properties: {col_widths: '{"KBODPN":10,"BGNMSE":30,"GNQJJB":20}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'XHVCIL,KLYZNJ'}
+    components:
+    - name: label_2
+      properties: {text: 'Enter your name:', align: right, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'TXPVNZ,KBODPN'}
+    - name: name_box
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'TXPVNZ,BGNMSE'}
+    - name: hello_button
+      properties: {text: Say Hello, role: primary-color}
+      type: Button
+      layout_properties: {grid_position: 'TXPVNZ,GNQJJB'}
+      event_bindings: {click: hello_button_click}
+    - name: message_label
+      properties: {align: center, font_size: 35}
+      type: Label
+      layout_properties: {grid_position: 'DSYAPR,FLBZGY'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: label_1
+  properties: {text: Hello World App}
+  type: Label
+  layout_properties: {slot: title}
